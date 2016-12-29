@@ -1,21 +1,18 @@
 #include<stdio.h>
-#include<conio.h>
-char* encode(char* str)
+#include<ctype.h>
+int main()
 {
-    int i=0;
-    while(str[i]!='\0')
+
+    char n;
+    printf("enter the char\n");
+    scanf("%c",&n);
+    if(n=='a'||n=='e'||n=='i'||n=='o'||n=='u')
     {
-      str[i]=str[i]-30;
-      i++;
+        printf("vowels");
     }
-   return (str);
-}
-void main()
-{
-    char *str;
-    printf("\n enter the string to be encode:");
-    gets(str);
-    str=encode(str);
-    printf("\n encoded string:%s",str);
-    getch();
+
+        else
+            printf("consonent");
+
+    return 0;
 }
